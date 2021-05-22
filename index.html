@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <meta charset="UTF-8">
+                <title>ToDo List</title>
+        </head>
+        <body>
+                <input id="note" type="text">
+                <button onclick="add()" >Add</button>
+                <ul id="list">
+                </ul>
+                <p>Click in item to remove</p>
+                <script>
+                        const add = () => {
+
+                                const id = Math.floor(Math.random() * 1000001)
+                                const list = document.getElementById("list")
+                                const note = document.getElementById("note")
+                                const item = `<li id=${id} onclick="remove(${id})" >${note.value}</li>`
+
+                                list.innerHTML += item
+                        } 
+                        const remove = (id) => {
+
+                                const list = document.getElementById("list")
+                                const item = document.getElementById(id)
+
+                                list.removeChild(item)
+                        }
+                </script>
+        </body>
+</html>
