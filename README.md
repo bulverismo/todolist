@@ -1,2 +1,2 @@
-# todolist
-Todo list feita para participar de processo seletivo
+# todo list
+Todo list simple apenas para demonstração
